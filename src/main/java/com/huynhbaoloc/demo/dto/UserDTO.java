@@ -1,24 +1,37 @@
 package com.huynhbaoloc.demo.dto;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 
 public class UserDTO {
 	
+	
 	private Long id;
 	
+	@NotEmpty(message = "First name is mandatory")
 	private String firstName;
 	
+	@NotEmpty(message = "Middle name is mandatory")
 	private String middleName;
 	
+	@NotEmpty(message = "Last name is mandatory")
 	private String lastName;
 	
+	@NotEmpty(message = "Phone number is mandatory")
 	private String phoneNumber;
 	
+	@NotEmpty(message = "Email is mandatory")
+	@Email
 	private String email;
-
+	
+	@NotEmpty(message = "Current address is mandatory")
 	private String currentAddress;
+	
 	
 	private String company;
 	
+	@NotEmpty(message = "Password is mandatory")
 	private String password;
 	
 	
